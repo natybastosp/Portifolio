@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+
     <title>Rock Paper Scissors</title>
   </head>
   <body>
@@ -14,18 +15,19 @@
     <div class="score-board">
       <div id="user-label" class="bagde">User</div>
       <div id="comp-label" class="bagde">Comp</div>
-      <span is="user-score">00</span> : <span is="comp-score">00</span>
+      <span id="user-score">00</span> :
+      <span id="comp-score">00</span>
     </div>
 
     <div class="result">
-      <p>Win</p>
+      <p>Let's play!!</p>
     </div>
 
     <div class="choices">
-      <div id="rck" class="choice">
+      <div id="rock" class="choice">
         <img src="assets/img/rock.png" alt="rock" />
       </div>
-      <div id="aper" class="choice">
+      <div id="paper" class="choice">
         <img src="assets/img/paper.png" alt="paper" />
       </div>
       <div id="scissors" class="choice">
@@ -33,5 +35,6 @@
       </div>
     </div>
     <p id="message">Make your move</p>
+    <script src="app.js"></script>
   </body>
 </html>
