@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+body {
+  background-color: #3b1c32;
+}
+
+header {
+  background-color: #ffffff;
+}
+
+header > h1 {
+  color: #3b1c32;
+  font-size: 2.5rem;
+  padding: 20px;
+  text-align: center;
+}
+
+.score-board {
+  border: 3px solid white;
+  border-radius: 10px;
+  color: white;
+  font-size: 46px;
+  margin: 20px auto;
+  width: 250px;
+  text-align: center;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.bagde {
+  background-color: #5ca4a9;
+  color: white;
+  font-size: 15px;
+  padding: 2px 9px;
+  font-weight: bold;
+}
+
+#user-label {
+  position: absolute;
+  top: 30px;
+  left: -25px;
+}
+
+#comp-label {
+  position: absolute;
+  top: 30px;
+  right: -30px;
+}
+
+.result {
+  color: white;
+  font-size: 40px;
+}
+
+.result > p {
+  padding: 15px 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.choice {
+  display: inline-block;
+  margin: 0 30px;
+  border: 4px solid white;
+  border-radius: 100%;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.choice:hover {
+  border-radius: 100%;
+  background-color: #864374;
+  cursor: pointer;
+}
+
+#message {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 30px;
+}
