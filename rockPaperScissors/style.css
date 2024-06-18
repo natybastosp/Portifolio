@@ -55,6 +55,7 @@ header > h1 {
 .result {
   color: white;
   font-size: 40px;
+  align-self: center;
 }
 
 .result > p {
