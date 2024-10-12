@@ -72,6 +72,23 @@ server.get<{ Params: driverParams }>(
   }
 );
 
+server.get<{ Params: driverParams }>(
+  "/teams/:id",
+  async (request, response) => {
+    const id = parseInt(request.params.id);
+
+    const team = teams.find((t) => t.id === id);
+
+    if (!team) {
+      response.type("application/json").code(404);
+      return { message: "Team not found" };
+    } else {
+      response.type("application/json").code(200);
+      return { team };
+    }
+  }
+);
+
 server.listen({ port: 3333 }, () => {
   console.log("Server is running on port 3333");
 });
