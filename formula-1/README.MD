@@ -1,81 +1,87 @@
-<div align="center">
+# API de Fórmula 1
 
-  <img src="./.github/assets/blue-saiyan-bg.png" alt="Logo" height="200">
-  <h1 align="center"><strong>NODE BOILERPLATE - BLUE EDITION</strong></h1>
-  <p align="center">
-	  Don't start a new Node project from zero!<br> Use this simple <b>Nodejs</b> boilerplate with pre-configured <b>Typescript</b> in a modern way.
-  </p>
+Esta é uma API mínima construída com Fastify que fornece informações sobre equipes e pilotos de Fórmula 1.
 
-</div>
+## Funcionalidades
 
-<br />
+- Obter uma lista de todas as equipes de Fórmula 1
+- Obter uma lista de todos os pilotos de Fórmula 1
+- Obter detalhes de um piloto específico por ID
+- Obter detalhes de uma equipe específica por ID
 
-  <!-- Badges -->
-<div align="center">
-  
-  [![TypeScript version][ts-badge]][typescript-5-4]
-  [![Node.js version][nodejs-badge]][nodejs]
+## Pré-requisitos
 
-</div>
+- Node.js
+- npm ou yarn
 
-# 🚀 Technologies
+## Instalação
 
-This code source was developed with the following items:
+1. Clone o repositório
+2. Instale as dependências:
+   ```
+   npm install
+   ```
+   ou
+   ```
+   yarn install
+   ```
 
-### 📦 Dependencies
+## Uso
 
-- [typescript][typescript-npm] - Superset for application scale JavaScript development
-- [tsx][tsx-npm] - TypeScript Execute (tsx): Enable Node.js to run TypeScript
-- [tsup][tsup-npm] - Bundle your TypeScript library with no config, powered by esbuild
-- [@types/node][@types/node-npm] - type definitions for node
+Para iniciar o servidor, execute:
 
-### 📄 Files
-
-- `.gitignore` - Ignore folders like node_modules
-- `.env` - Enviroment variables
-- `tsconfig.json` - Typescript configure Options
-
-### ⚡ Scripts
-
-- `npm run dist`: Compiles TypeScript files to JavaScript in the dist directory.
-- `npm run start:dev`: Runs the server in development mode with environment variables loaded from the .env file.
-- `npm run start:watch`: Runs the server in development mode with support for automatic reload on file changes.
-- `npm run start:dist`: Compiles the project and runs the compiled version from the dist directory.
-
-# 👨‍💻 How To Use
-
-click in **[Use this template]** OR
-
-To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v20+](https://nodejs.org/en/) + [NPM v10+](https://nodejs.org/en/) installed on your computer. From your command line:
-
-```bash
-# Clone this repository
-$ git clone https://github.com/felipeAguiarCode/node-blue-boilerplate
-
-# Go into the repository
-$ cd node-blue-boilerplate
-
-# Install dependencies
-$ npm install
+```
+node server.js
 ```
 
-## Author
+O servidor começará a funcionar em `http://localhost:3333`.
 
-| [<img src="https://avatars3.githubusercontent.com/u/37452836?s=96&v=4"><br><sub>Felipe Aguiar</sub>](https://github.com/felipeAguiarCode) |
-| :---------------------------------------------------------------------------------------------------------------------------------------: |
-|                                            [Linkedin](www.linkedin.com/in/felipe-aguiar-exe/)                                             |
+## Endpoints da API
 
-# Credits
+### Obter todas as equipes
 
-icons by [Pino Lamanna][dribble-icon]
+```
+GET /teams
+```
 
-[typescript]: https://www.typescriptlang.org/
-[typescript-5-4]: https://www.typescriptlang.org/
-[ts-badge]: https://img.shields.io/badge/TypeScript-5.4-blue.svg
-[nodejs-badge]: https://img.shields.io/badge/Node.js->=%2020.00-blue.svg
-[nodejs]: https://nodejs.org/
-[dribble-icon]: https://dribbble.com/Schakalwal
-[typescript-npm]: https://www.npmjs.com/package/typescript
-[tsx-npm]: https://www.npmjs.com/package/tsx
-[tsup-npm]: https://www.npmjs.com/package/tsup
-[@types/node-npm]: https://www.npmjs.com/package/@types/node
+Retorna uma lista de todas as equipes de Fórmula 1.
+
+### Obter todos os pilotos
+
+```
+GET /drivers
+```
+
+Retorna uma lista de todos os pilotos de Fórmula 1.
+
+### Obter um piloto específico
+
+```
+GET /drivers/:id
+```
+
+Retorna detalhes de um piloto específico. Substitua `:id` pelo ID do piloto.
+
+### Obter uma equipe específica
+
+```
+GET /teams/:id
+```
+
+Retorna detalhes de uma equipe específica. Substitua `:id` pelo ID da equipe.
+
+## Tratamento de Erros
+
+- Se um piloto ou equipe com o ID especificado não for encontrado, a API retornará um código de status 404 com uma mensagem de "não encontrado".
+
+## CORS
+
+Esta API tem CORS habilitado e permite solicitações de qualquer origem (`*`).
+
+## Contribuindo
+
+Sinta-se à vontade para enviar pull requests ou abrir issues para melhorar a API.
+
+## Licença
+
+[Licença MIT](LICENSE)
